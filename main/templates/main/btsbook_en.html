@@ -1,0 +1,556 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секретная Книга</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper d-flex flex-column min-vh-100">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg shadow-md">
+        <div class="container-fluid">
+            <div class="d-flex ms-auto align-items-center d-lg-none">
+                <div class="lang-switch me-3">
+                        <a class="lang" href="/">UA</a> | <a class="lang-active" href="#">EN</a>
+                    </div>
+                    <a href="#buy_book" class="btn nav-link btn-warning pill me-3">Buy the Book</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about_book">About the Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prologue">Prologue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#author">Author</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#review">Reviews</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="lang-switch me-3">
+                        <a class="lang" href="/">UA</a> | <a class="lang-active" href="#">EN</a>
+                    </div>
+                    <a href="#buy_book" class="btn nav-link btn-warning pill">Buy the Book</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Основной контент -->
+    <section class="main-section d-flex flex-column flex-lg-row align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="section-title text-center mb-5 animate-title">"Go Crazy or Going to Your Dream"</h1>
+
+            <div class="d-flex flex-column flex-xl-row image-and-text">
+                <div class="image-container mb-4 mb-lg-0 animate-left">
+                    <img src="{% static 'images/1_en.png' %}" alt="Decorative star" class="star-image">
+                </div>
+
+                <div class="text-container animate-right">
+                    <h2 class="section-title">A Story of Love and the Power of Dreams</h2>
+                    <h2>This book is more than an autobiography. It’s a story about boundless love and the journey of a
+                        woman who dared to follow her heart.</h2>
+                    <h2>This book is an honest and inspiring tale of how music can change one’s destiny and how belief
+                        in a dream can overcome all obstacles.</h2>
+                    <h2>Did she meet BTS? How did this experience transform her life?
+                        And what does love really mean in a world where dreams seem impossible?</h2>
+                    <h2>The answers to these and many other important questions are revealed in this book.</h2>
+                    <div class="first-button">
+                        <a href="#about_book" class="btn btn-main">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="quote-section-second">
+        <div class="container text-center quote-block animate-quote">
+            <div class="quote-text">
+                <p>"Courage begins when you follow your dream, even when it seems crazy."</p>
+                <footer class="quote-author">— Socrates</footer>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="photo-text-section" id="about_book">
+        <div class="container">
+            <div class="d-flex flex-column flex-xl-row text-container-second">
+                <div class="photo-container mb-4 mb-lg-0 me-lg-5 animate-photo">
+                    <img src="{% static 'images/2_en.png' %}" alt="Book cover" class="photo-image">
+                </div>
+                <div class="text-container animate-text">
+                    <h2 class="section-title">The Path to a Dream</h2>
+                    <p class="section-description">The book "Go Crazy or Going to Your Dream" is an emotional journey that
+                        makes you reflect on courage, love, and the power of art to transform our lives.</p>
+                    <p class="section-description">The author shares a personal story filled with ups and downs, showing
+                        that dreams are not just beautiful illusions but real guiding stars that help us overcome
+                        obstacles and find ourselves.</p>
+                    <p class="section-description">This book tells the story of a woman who dared to take a bold step —
+                        to follow her dream no matter what. Immersing yourself in the world of love, music, and faith
+                        will leave no reader indifferent.</p>
+                    <div class="first-button">
+                        <a href="#prologue" class="btn btn-learn-more">View the Book</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="flipbook-section" id="prologue">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 animate-top">View a Few Pages of the Book</h2>
+            <div class="flipbook animate-bottom">
+                <div class="book-page page1">
+                    <img src="{% static 'images/5p_EN_page-0001.jpg' %}" alt="Page 1">
+                </div>
+                <div class="book-page page2">
+                    <img src="{% static 'images/5p_EN_page-0002.jpg' %}" alt="Page 2">
+                </div>
+                <div class="book-page page3">
+                    <img src="{% static 'images/5p_EN_page-0003.jpg' %}" alt="Page 3">
+                </div>
+                <div class="book-page page4">
+                    <img src="{% static 'images/5p_EN_page-0004.jpg' %}" alt="Page 4">
+                </div>
+                <div class="book-page page5">
+                    <img src="{% static 'images/5p_EN_page-0005.jpg' %}" alt="Page 5">
+                </div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="d-flex flipbook-controls mt-4 text-center animate-bottom">
+                <button class="btn btn-secondary btn-prev">Back</button>
+                <button class="btn btn-secondary btn-next">Next</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="quote-section-first">
+        <div class="container text-center quote-block animate-quote-bottom">
+            <div class="quote-text">
+                <p>"Author Iryna Klypko is a woman who transformed her love for BTS into a source of inspiration and
+                    courage. Her story captivated Korea, became a symbol of Ukrainian women's strength, and united the
+                    hearts of fans around the world."</p>
+                <footer class="quote-author">— Sofiia Melnyk, "Hochu!" portal</footer>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-author-section" id="author">
+        <div class="container">
+            <div class="d-flex flex-column flex-xl-row">
+                <div class="author-photo-container mb-4 mb-lg-0 animate-photo-left">
+                    <img src="{% static 'images/iryna_klypko.jpg' %}" alt="Author's photo" class="author-photo">
+                    <p class="photo-caption-name">Iryna Klypko - the author of the book.</p>
+                    <p class="photo-caption-photo">Photo: news.hochu.ua</p>
+                </div>
+                <div class="author-text-container text-lg-start animate-text-right">
+                    <h2 class="author-title">About the Author</h2>
+                    <p class="author-description">Iryna Klypko is a 59-year-old Ukrainian woman, a mother of many
+                        children, a dreamer, and an inspirer who proves that life can always be changed if you follow
+                        your dreams. Her story is an example of how love for music and self-belief can become a driving
+                        force for transformation.</p>
+                    <p class="author-description">For a long time, her life was ordinary—family, work, routine. However,
+                        everything changed when she discovered the music of the iconic Korean band BTS. Their music
+                        became a source of inspiration and a push for change in her life.</p>
+                    <div class="first-button">
+                        <a href="#review" class="btn btn-about-more">Reviews</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="quote-section">
+        <div class="container text-center quote-block animate-quote-bottom-2">
+            <div class="quote-text">
+                <p>"Dreams are not about age or circumstances. They are about the courage to take the first step toward
+                    yourself."</p>
+                <footer class="quote-author">— Iryna Klypko</footer>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="reviews-section" id="review">
+        <div class="container">
+            <h2 class="reviews-title text-center mb-4 animate-title-right">Reader Reviews</h2>
+
+            <!-- Review Slider -->
+            <div id="reviewsCarousel" class="carousel slide animate-reviews-left" data-bs-ride="carousel"
+                 data-bs-interval="5500">
+                <div class="carousel-inner">
+                    <!-- First Slide with Three Reviews -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"This book made me rethink my dreams and the courage to
+                                        pursue them. An incredibly inspiring story!"</p>
+                                    <p class="review-author">— Olena, Kyiv</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"After reading this book, I realized that nothing is
+                                        impossible. It’s truly a journey to self-discovery."</p>
+                                    <p class="review-author">— Andrii, Lviv</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"Iryna’s story inspired me to take the first step toward
+                                        change in my life. I highly recommend it to everyone!"</p>
+                                    <p class="review-author">— Mariia, Kharkiv</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Slide with Three Reviews -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"This book tells the story of the real power of dreams. After
+                                        reading it, I knew I was ready to take risks."</p>
+                                    <p class="review-author">— Svitlana, Odesa</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"This story inspired me to find a new passion in life. An
+                                        incredibly motivational book!"</p>
+                                    <p class="review-author">— Viktor, Chernihiv</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"Iryna’s book became a guide for me. I realized that dreams
+                                        have no boundaries, except those we create ourselves."</p>
+                                    <p class="review-author">— Maksym, Dnipro</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Slide with Three Reviews -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"This book gave me the strength to take the first step toward
+                                        a personal project I had been postponing."</p>
+                                    <p class="review-author">— Anastasiia, Poltava</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"I recommend this to anyone dreaming of change. The book
+                                        proves it’s possible!"</p>
+                                    <p class="review-author">— Dmytro, Zaporizhzhia</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">"A story that inspires a fresh perspective on life and
+                                        dreams. Thank you for this remarkable inspiration!"</p>
+                                    <p class="review-author">— Tetiana, Vinnytsia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel"
+                        data-bs-slide="prev">
+                    <span class="bi bi-chevron-left carousel-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel"
+                        data-bs-slide="next">
+                    <span class="bi bi-chevron-right carousel-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="book-formats-section" id="buy_book">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 animate-title-top">Book Formats Available for Purchase</h2>
+            <div class="row g-4">
+                <!-- First Book Format -->
+                <div class="col-lg-6 animate-card-bottom" style="--delay: 0s;">
+                    <div class="book-card p-4">
+                        <h3 class="book-title">«Збожеволiти або йти до своєї мрiї»</h3>
+                        <p class="book-language">Language: Ukrainian</p>
+                        <img src="{% static 'images/ua.png' %}" alt="The Secret Book" class="book-cover mb-3 mt-3">
+                        <div class="price-options">
+                            <button class="btn btn-order" data-book-language="Українська" onclick="setBookLanguage(this)" data-book="Збожеволiти або йти до своєї мрiї">Printed Version:
+                                <span>25 €</span></button>
+                        </div>
+                        <div class="more-details">
+                            <a href="#faq">More about the purchase</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Book Format -->
+<!--                <div class="col-lg-4 animate-card-bottom" style="&#45;&#45;delay: 0.3s;">-->
+<!--                    <div class="book-card p-4">-->
+<!--                        <h3 class="book-title">«Go crazy or going to your dream»</h3>-->
+<!--                        <p class="book-language">Language: English</p>-->
+<!--                        <img src="{% static 'images/en.png' %}" alt="The Secret Book" class="book-cover mb-3 mt-3">-->
+<!--                        <div class="price-options">-->
+<!--                            <button class="btn btn-order" data-book-language="Англійська" onclick="setBookLanguage(this)" data-book="Збожеволiти або йти до своєї мрiї">Printed Version:-->
+<!--                                <span>25 €</span></button>-->
+<!--                        </div>-->
+<!--                        <div class="more-details">-->
+<!--                            <a href="#faq">More about the purchase</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+                <!-- Third Book Format -->
+                <div class="col-lg-6 animate-card-bottom" style="--delay: 0.6s;">
+                    <div class="book-card p-4">
+                        <h3 class="book-title">«Сойти с ума или идти к своей мечте»</h3>
+                        <p class="book-language">Language: Russian</p>
+                        <img src="{% static 'images/ru.png' %}" alt="The Secret Book" class="book-cover mb-3 mt-3">
+                        <div class="price-options">
+                            <button class="btn btn-order" data-book-language="Російська" onclick="setBookLanguage(this)" data-book="Збожеволiти або йти до своєї мрiї">Printed Version:
+                                <span>25 €</span></button>
+                        </div>
+                        <div class="more-details">
+                            <a href="#faq">More about the purchase</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Всплывающее окно (модальное окно) -->
+    <!-- Всплывающее окно (модальное окно) -->
+    <div id="orderModal" class="modal-overlay">
+        <div class="modal-content p-4">
+            <button class="btn-close" id="closeModal"></button>
+            <h3 id="modalTitle" class="text-center">Book Order</h3>
+
+            <!-- Delivery Option Selection -->
+            <div id="deliveryOptions">
+                <p class="modal-message text-center mb-3">Select a delivery option:</p>
+                <div class="modal-buttons d-flex justify-content-center mb-4">
+                    <button class="btn btn-delivery me-2" id="btn-ukraine">Delivery within Ukraine</button>
+                    <button class="btn btn-delivery" id="btn-world">International Delivery</button>
+                </div>
+            </div>
+
+            <!-- Delivery Form for Ukraine -->
+            <form id="ukraineForm" action="{% url 'submit_ukraine_form' %}" method="post" class="delivery-form d-none">
+                {% csrf_token %}
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                <input type="hidden" name="lang" value="{{ request.LANGUAGE_CODE }}">
+                <input type="hidden" id="request_token_ukraine" name="request_token" value="{{ uuid.uuid4 }}">
+                <input type="hidden" id="book_language_ukraine" name="book_language" value="">
+                <div class="mb-3">
+                    <label for="first_name_ua" class="form-label">First Name</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name_ua" placeholder="John" required>
+                </div>
+                <div class="mb-3">
+                    <label for="last_name_ua" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name_ua" placeholder="Doe" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone_ua" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" name="phone" id="phone_ua" placeholder="+380(000)-000-00-00" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address_ua" class="form-label">Delivery Address by Nova Post(city, branch number or postomat number)</label>
+                    <input type="text" class="form-control" name="address" id="address_ua" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email_ua" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email_ua" placeholder="johndoe123@gmail.com" required>
+                </div>
+                <button type="button" class="btn btn-submit" onclick="redirectToLiqPay('ukraineForm', 'ukraine')">
+                    Place Order
+                </button>
+            </form>
+
+            <!-- International Delivery Form -->
+            <form id="worldForm" action="{% url 'submit_world_form' %}" method="post" class="delivery-form d-none">
+                {% csrf_token %}
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                <input type="hidden" name="lang" value="{{ request.LANGUAGE_CODE }}">
+                <input type="hidden" id="request_token_world" name="request_token" value="{{ uuid.uuid4 }}">
+                <input type="hidden" id="book_language_world" name="book_language" value="">
+                <div class="mb-3">
+                    <label for="first_name_world" class="form-label">First Name (Latin)</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name_world" placeholder="John" required>
+                </div>
+                <div class="mb-3">
+                    <label for="last_name_world" class="form-label">Last Name (Latin)</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name_world" placeholder="Doe" required>
+                </div>
+                <div class="mb-3">
+                    <label for="country_world" class="form-label">Country</label>
+                    <input type="text" class="form-control" name="country" id="country_world" placeholder="Germany" required>
+                </div>
+                <div class="mb-3">
+                    <label for="city_world" class="form-label">City</label>
+                    <input type="text" class="form-control" name="city" id="city_world" placeholder="Berlin" required>
+                </div>
+                <div class="mb-3">
+                    <label for="postal_code_world" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" name="postal_code" id="postal_code_world" placeholder="59000" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address_world" class="form-label">Address (Street, Building, Apartment)</label>
+                    <input type="text" class="form-control" name="address" id="address_world" placeholder="Bergfriedstraße, 123" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone_world" class="form-label">Phone Number with Country Code</label>
+                    <input type="tel" class="form-control" name="phone" id="phone_world" placeholder="+49(000)-000-00-00" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email_world" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email_world" placeholder="johndoe123@gmail.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="additional_info_world" class="form-label">Additional Information</label>
+                    <textarea class="form-control" name="additional_info" id="additional_info_world"
+                              rows="3"></textarea>
+                </div>
+                <button type="button" class="btn btn-submit" onclick="redirectToLiqPay('worldForm', 'world')">
+                    Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 animate-title-top">Frequently Asked Questions</h2>
+            <div class="faq-item animate-question-left" style="--delay: 0s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>How can I buy your book?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>You can purchase the book directly on <u>our website</u> by clicking on the <u>button with the
+                        selected version of the book and its price</u>. The cost of one copy in any of the two
+                        languages (Ukrainian or Russian) is <u>25€ ≈ 1100₴</u>.</p>
+                    <p>Payment is made in <u>euros (€) according to the central bank rate</u>. Once the payment is
+                        successful, you will receive a <u>receipt at the email address you provided</u>. We will prepare
+                        and ship the book within 2-3 working days to the address you specified.</p>
+                    <p>✨Your copy is waiting for you—place your order now!✨</p>
+                </div>
+            </div>
+            <div class="faq-item animate-question-left" style="--delay: 0.2s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>How will my book be delivered?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Delivery within Ukraine is carried out via <u>Nova Poshta</u>—choose the branch
+                        convenient or postomat for you during checkout. We provide <u>free delivery across all of Ukraine</u>.</p>
+                    <p>International delivery is handled by <u>international courier services</u>. The delivery time
+                        depends on the <u>destination country and may vary</u>. The cost of international delivery is
+                        <u>23€</u> and is already included in the final amount for orders outside Ukraine (48€).</p>
+                    <p>✨We ensure fast and reliable delivery of your book to any corner of the world!✨</p>
+                </div>
+            </div>
+            <div class="faq-item animate-question-left" style="--delay: 0.4s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>Is the book available in electronic format?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>The book is currently <u>available only in print</u>, but very soon you will be able to purchase
+                        the electronic version of "Go Crazy or Going to Your Dream," designed for comfortable reading on
+                        your favorite devices.✨</p>
+                </div>
+            </div>
+            <div class="faq-item animate-question-left" style="--delay: 0.6s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>Where can I ask questions about my order?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>You can send any questions regarding your order or delivery to our email address:
+                        agentsolitary@gmail.com. We are always happy to assist you!✨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Футер -->
+    <footer class="main-footer text-center py-3 mt-auto">
+        <p>&copy; <span id="currentYear"></span> «Go Crazy or Going to Your Dream».</p>
+        <p>All rights reserved.</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'js/page_turning.js' %}"></script>
+<script src="{% static 'js/dynamic_year.js' %}"></script>
+<script src="{% static 'js/overlay_mode.js' %}"></script>
+<script src="{% static 'js/right_overlay_close.js' %}"></script>
+<script>
+    const STRIPE_PUBLIC_KEY = "{{ STRIPE_PUBLIC_KEY }}";
+</script>
+<script src="{% static 'js/stripe_pay_session.js' %}"></script>
+<script src="{% static 'js/state_switch_navbar.js' %}"></script>
+<script src="{% static 'js/open_close_question.js' %}"></script>
+<script src="{% static 'js/book_language.js' %}"></script>
+
+<script src="{% static 'js/animation/first_section.js' %}"></script>
+<script src="{% static 'js/animation/second_section.js' %}"></script>
+<script src="{% static 'js/animation/third_section.js' %}"></script>
+<script src="{% static 'js/animation/fourth_section.js' %}"></script>
+<script src="{% static 'js/animation/fifth_section.js' %}"></script>
+<script src="{% static 'js/animation/sixth_section.js' %}"></script>
+<script src="{% static 'js/animation/seventh_section.js' %}"></script>
+<script src="{% static 'js/animation/eighth_section.js' %}"></script>
+<script src="{% static 'js/animation/nineth_section.js' %}"></script>
+<script src="{% static 'js/animation/tenth_section.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,1678 @@
+/* Убедимся, что body и html занимают всю высоту */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #1d062e;
+    color: white;
+    font-family: "Roboto Slab", serif;
+}
+
+/* Обёртка для контента и футера */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Вся высота экрана */
+}
+
+/* Контент занимает всю доступную высоту */
+.content {
+    flex: 1;  /* Заставляет контент занимать доступное пространство */
+}
+
+.container {
+    --bs-gutter-x: 0rem;
+}
+
+.btn:hover,
+.btn:focus,
+.btn.active {
+    color: #3e206d !important;  /* Цвет при наведении или выборе */
+}
+
+
+
+
+
+/* Стили для навбара */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background: #1d062e;
+    border-bottom: 2px solid #ffda44;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: top 0.4s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+    color: #ffda44;  /* Цвет при наведении или выборе */
+    background: transparent;    /* Убираем фоновый цвет */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: #ffda44;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: #ffda44;
+    text-shadow: 0px 0px 8px #ffe999;
+}
+
+.navbar-toggler:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler {
+    padding: 0 !important;
+    order: 3;
+}
+
+.navbar-toggler i {
+    font-size: 2rem;
+    color: #ffda44;
+    text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.8);
+    transition: transform 0.2s;
+}
+.navbar-toggler:hover i {
+    transform: scale(1.2);
+}
+
+/* Кнопка покупки книги */
+.buy-button {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.buy-button:hover {
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    transform: scale(1.05);
+}
+
+/* Переключение языка */
+.lang-switch {
+    color: #ffda44;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.lang-switch a {
+    color: #ffda44;
+    text-decoration: none;
+    padding: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.lang-switch a:hover {
+    color: #ffe999;
+}
+
+.pill {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px !important;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);
+    transition: all 0.3s ease;
+}
+
+.pill:hover {
+    color: #3e206d !important;
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    box-shadow: 0px 10px 30px rgba(255, 218, 68, 0.6);
+    transform: scale(1.01);
+}
+
+.lang-active {
+    text-shadow: 0 0 5px rgba(255, 218, 68, 0.8), 0 0 10px rgba(255, 218, 68, 0.6);
+}
+
+
+
+
+/* Стили для секции с заголовком */
+.intro-section {
+    background-color: #530a6b;
+    color: #ffda44;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.intro-section p {
+    font-size: 1.2rem;
+}
+
+.intro-section .btn {
+    border-color: #ffda44;
+    color: #ffda44;
+}
+
+.intro-section .btn:hover {
+    background-color: #ffda44;
+    color: #3e206d;
+}
+
+
+
+
+
+
+.main-section {
+    background: linear-gradient(to top, #530a6b, #52237f);
+    padding: 40px 15px;
+    color: #ffda44;
+}
+
+.image-and-text {
+
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 25px 0px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-right: 98px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 20px rgba(255, 218, 68, 0.3), 0 0 40px rgba(255, 218, 68, 0.6);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #ffda44;
+    text-align: center;
+}
+
+.star-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: zoomIn 1.5s infinite alternate;
+}
+
+.star-image:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.container h1 {
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ffda44;
+    text-shadow: 0 0 5px rgba(255, 218, 68, 0.8), 0 0 10px rgba(255, 218, 68, 0.6);
+    letter-spacing: 2px;
+    animation: glowingText 2s infinite alternate;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Текстовые стили */
+.text-container h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+
+.text-container h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.first-button {
+    text-align: start;
+}
+
+/* Кнопка "Так!" */
+.btn-main {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+    color: #3e206d;
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    box-shadow: 0px 10px 30px rgba(255, 218, 68, 0.6);
+    transform: scale(1.01);
+}
+
+
+
+
+
+/* --- Секция с фотографией и текстом --- */
+.photo-text-section {
+    background: linear-gradient(to bottom, #52237f, #530a6b);
+    color: #ffda44;
+    padding: 40px 20px;
+}
+
+/* --- Анимация появления секции --- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-container-second {
+
+}
+
+.photo-container {
+    flex-shrink: 0;
+}
+
+.photo-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+    margin-right: 50px;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 20px rgba(255, 218, 68, 0.3), 0 0 40px rgba(255, 218, 68, 0.6);
+}
+
+.photo-image:hover {
+    transform: scale(1.05);
+}
+
+/* --- Текстовое оформление --- */
+
+
+.text-container .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.8);
+}
+
+.section-description {
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-align: justify;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn-second-slide {
+    text-align: center;
+}
+
+/* --- Кнопка "Узнать больше" --- */
+.btn-learn-more {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-learn-more:hover {
+    color: #3e206d;
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    box-shadow: 0px 10px 30px rgba(255, 218, 68, 0.6);
+    transform: scale(1.01);
+}
+
+
+
+
+
+
+
+
+/* --- Секция книги --- */
+.flipbook-section {
+    background: linear-gradient(to top, #52237f, #530a6b);
+    padding: 40px 20px;
+    color: #ffda44;
+    text-align: center;
+}
+
+/* Заголовок секции */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.8);
+}
+
+/* Обертка книги */
+.flipbook {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: 600px;
+    margin: 0 auto;
+    perspective: 1200px;
+    border-radius: 15px;
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 20px rgba(255, 218, 68, 0.3), 0 0 40px rgba(255, 218, 68, 0.6);
+}
+
+/* Общие стили для страниц */
+.book-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    backface-visibility: hidden;
+    transform-origin: left;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+/* Положение страниц в начальном состоянии */
+.page1 { z-index: 5; transform: rotateY(0deg); }
+.page2 { z-index: 4; transform: rotateY(180deg); }
+.page3 { z-index: 3; transform: rotateY(180deg); }
+.page4 { z-index: 2; transform: rotateY(180deg); }
+.page5 { z-index: 1; transform: rotateY(180deg); }
+
+/* Стили изображений на страницах */
+.book-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Кнопки управления */
+.flipbook-controls button {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    padding: 12px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);
+    transition: all 0.3s ease;
+}
+
+.flipbook-controls {
+    gap: 20px;
+    justify-content: center;
+}
+
+.flipbook-controls button:hover {
+    color: #3e206d;
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    box-shadow: 0px 10px 30px rgba(255, 218, 68, 0.6);
+    transform: scale(1.01);
+}
+
+.btn[disabled] {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- Секция об авторе --- */
+.about-author-section {
+    background: linear-gradient(to bottom, #530a6b, #52237f);
+    color: #ffda44;
+    padding: 40px 20px;
+}
+
+/* --- Анимация плавного появления --- */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Фото автора --- */
+.author-photo-container {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.author-photo {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+    margin-right: 98px;
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 20px rgba(255, 218, 68, 0.3), 0 0 40px rgba(255, 218, 68, 0.6);
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+.photo-caption-name {
+    font-size: 1rem;
+    color: #ffe999;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-right: 90px;
+    font-style: italic;
+}
+
+.photo-caption-photo {
+    font-size: 1rem;
+    color: #ffe999;
+    margin-top: 0px;
+    margin-right: 90px;
+    font-style: italic;
+}
+
+/* --- Текстовая часть --- */
+.author-text-container {
+
+}
+
+.author-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.8);
+}
+
+.author-description {
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.6;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Кнопка --- */
+.btn-about-more {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-about-more:hover {
+    color: #3e206d;
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    box-shadow: 0px 10px 30px rgba(255, 218, 68, 0.6);
+    transform: scale(1.01);
+}
+
+
+
+
+
+.quote-section-first {
+    background: linear-gradient(to top, #530a6b, #52237f);
+    color: #ffda44;
+    padding: 40px 20px;
+}
+
+.quote-section-second {
+    background: linear-gradient(to bottom, #530a6b, #52237f);
+    color: #ffda44;
+    padding: 40px 20px;
+}
+/* --- Секция цитаты --- */
+.quote-section {
+    background: linear-gradient(to top, #530a6b, #52237f);
+    color: #ffda44;
+    padding: 40px 20px;
+}
+
+/* --- Анимация плавного появления --- */
+
+
+.quote-block {
+    width: 100%;
+    max-width: 1000px;
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 20px rgba(255, 218, 68, 0.3), 0 0 40px rgba(255, 218, 68, 0.6);
+    border-radius: 15px;
+    padding: 30px 25px;
+}
+
+/* --- Текст цитаты --- */
+.quote-text {
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.5);
+    line-height: 1.6;
+    position: relative;
+}
+
+
+.quote-text::before {
+    top: -30px;
+    left: -20px;
+}
+
+
+/* --- Автор цитаты --- */
+.quote-author {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ffda44;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+/* --- Секция отзывов --- */
+.reviews-section {
+    background: linear-gradient(to bottom, #530a6b, #52237f);
+    color: #ffda44;
+    padding: 40px 20px;
+}
+
+/* --- Заголовок секции --- */
+.reviews-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.8);
+    margin-bottom: 40px;
+}
+
+/* --- Обертка карточек для равной высоты --- */
+.carousel-item .row {
+    display: flex;
+    align-items: stretch;
+}
+
+/* --- Карточка отзыва --- */
+.review-card {
+    background: linear-gradient(to top, #530a6b, #52237f);
+    color: #ffda44;
+    border-radius: 15px;
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 10px rgba(255, 218, 68, 0.3), 0 0 10px rgba(255, 218, 68, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 250px;  /* Минимальная высота для всех карточек */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Текст равномерно распределен */
+    padding: 20px;
+}
+
+
+
+/* --- Текст отзыва --- */
+.review-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    text-shadow: 0px 0px 5px rgba(255, 218, 68, 0.8);
+}
+
+/* --- Автор отзыва --- */
+.review-author {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: right;
+    color: #ffda44;
+    margin-top: auto;  /* Автор всегда внизу карточки */
+}
+
+.carousel-item .row {
+    padding: 0px 30px;
+}
+
+/* --- Кнопки управления слайдером --- */
+/* --- Расширение области стрелок --- */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Узкая кнопка по ширине */
+}
+
+.carousel-icon {
+    color: #ffda44;
+    font-size: 45px;
+    font-weight: 600;
+
+    opacity: 1;
+    transition: transform 0.3s ease;
+}
+
+.carousel-icon:hover {
+    transform: scale(1.2);
+}
+
+/* --- Отступы для стрелок управления --- */
+.carousel-control-prev {
+    left: -3%; /* Отодвигаем влево за пределы отзывов */
+    opacity: 1;
+    text-shadow: 0px 0px 5px rgba(255, 218, 68, 0.8);
+}
+
+.carousel-control-next {
+    right: -3%; /* Отодвигаем вправо за пределы отзывов */
+    opacity: 1;
+    text-shadow: 0px 0px 5px rgba(255, 218, 68, 0.8);
+}
+
+.row>* {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+/* --- Секция форматов книг --- */
+.book-formats-section {
+    background: linear-gradient(to top, #530a6b, #52237f);
+    color: #ffda44;
+    padding: 40px 20px;
+}
+
+/* --- Заголовок секции --- */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.8);
+    margin-bottom: 40px;
+}
+
+/* --- Карточка книги --- */
+.book-card {
+    background: linear-gradient(to bottom, #530a6b, #52237f);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 10px rgba(255, 218, 68, 0.3), 0 0 10px rgba(255, 218, 68, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Заголовок книги --- */
+.book-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0px 0px 5px rgba(255, 218, 68, 0.8);
+}
+
+/* --- Информация о книге --- */
+.book-language,
+.book-format {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+/* --- Обложка книги --- */
+.book-cover {
+    width: auto;
+    height: 100%;
+    max-height: 265px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.book-card:hover .book-cover {
+    transform: scale(1.1); /* Увеличиваем изображение при наведении на карточку */
+}
+
+/* --- Опции цен --- */
+.price-options {
+    margin-top: 15px;
+}
+
+.price-tag {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);
+    transition: all 0.3s ease;
+}
+
+.price-tag span {
+    color: #3e206d;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* --- Эффект при наведении на карточки цен --- */
+.price-tag:hover {
+    color: #3e206d;
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    box-shadow: 0px 10px 30px rgba(255, 218, 68, 0.6);
+    transform: scale(1.01);
+}
+
+.btn-order {
+    background: linear-gradient(135deg, #ffda44, #ffe999);
+    color: #3e206d;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-order:hover {
+    color: #3e206d;
+    background: linear-gradient(135deg, #ffe999, #ffda44);
+    box-shadow: 0px 10px 30px rgba(255, 218, 68, 0.6);
+    transform: scale(1.01);
+}
+
+.more-details {
+    padding-top: 20px;
+}
+
+.more-details a {
+    color: #ffda44 !important;
+}
+
+
+
+
+
+
+.faq-section {
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #530a6b, #52237f);
+
+}
+
+.faq-item {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 700px;
+    border: 2px solid #ffda44;
+    box-shadow: 0 0 10px rgba(255, 218, 68, 0.3), 0 0 10px rgba(255, 218, 68, 0.6);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: linear-gradient(to top, #530a6b, #52237f);
+    color: #ffda44;
+    font-weight: 400;
+    padding: 15px 20px;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #e0a800;
+}
+
+.faq-answer {
+    padding: 15px 20px;
+    font-size: 1rem;
+    background: linear-gradient(to bottom, #530a6b, #52237f);
+    color: #ffda44;
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.faq-question i {
+    transition: transform 0.5s ease;
+}
+
+.faq-question.open i {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+/* --- Оверлей модального окна --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Содержимое модального окна --- */
+.modal-content {
+    background-color: #ffda44;
+    color: #3e206d;
+    padding: 40px;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-content h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.modal-buttons .btn {
+    width: 48%;
+    background-color: #3e206d;
+    color: #ffda44;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.modal-buttons .btn:hover,
+.modal-buttons .btn:focus,
+.modal-buttons .btn.active
+{
+    background-color: #52237f;
+    color: #ffda44 !important;  /* Цвет при наведении или выборе */
+}
+
+/* Кнопка закрытия модального окна */
+.btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    color: #3e206d;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.btn-close:hover {
+    color: #52237f;
+}
+
+
+
+
+
+
+
+
+.modal-content {
+    position: relative;
+    background-color: #ffda44;
+    color: #3e206d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px; /* Ограничим ширину модального окна */
+    max-height: 90vh; /* Ограничим высоту окна */
+    overflow-y: auto; /* Добавим прокрутку внутри модального окна */
+    text-align: center;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #3e206d;
+    border-radius: 15px;
+}
+
+.delivery-form {
+    margin-top: 10px;
+}
+
+/* Обеспечиваем адаптацию полей для мобильных устройств */
+@media (max-width: 768px) {
+    .modal-content {
+        padding: 20px;
+    }
+
+    .btn-submit {
+        width: 100%; /* Кнопка отправки будет растягиваться на весь экран */
+    }
+}
+
+.btn-submit {
+    background-color: #3e206d;
+    color: #ffda44;
+    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover,
+.btn-submit:focus,
+.btn-submit.active {
+    background-color: #52237f;
+    color: #ffda44 !important;  /* Цвет при наведении или выборе */
+}
+
+
+input:focus, textarea:focus {
+    outline: none !important; /* Убираем синюю обводку */
+    box-shadow: none !important;
+    border-color: #3e206d !important; /* Добавляем желтую рамку при фокусе */
+}
+
+.is-invalid {
+        border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none;
+}
+
+
+
+
+#successOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#successOverlay .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+#successOverlay h2 {
+    color: #28a745;
+}
+
+#successOverlay .btn {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+/* Стили для футера */
+.main-footer {
+    background: #1d062e;
+    border-top: 2px solid #ffda44;
+    padding: 20px 0;
+    color: #ffda44;
+    text-align: center;
+}
+
+
+
+
+
+
+/* Начальные состояния анимации */
+.animate-title, .animate-left, .animate-right {
+    opacity: 0;
+    transform: translateY(50px); /* Заголовок вниз */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Заголовок */
+.animate-title.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Анимация слева направо */
+.animate-left {
+    transform: translateX(-50px);
+}
+
+.animate-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Анимация справа налево */
+.animate-right {
+    transform: translateX(50px);
+}
+
+.animate-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+/* Начальное состояние анимации */
+.animate-quote {
+    opacity: 0;
+    transform: translateY(50px); /* Сдвиг вниз */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Анимация при появлении */
+.animate-quote.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* Начальные состояния анимации */
+.animate-photo, .animate-text {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Фото выезжает слева */
+.animate-photo {
+    transform: translateX(-50px);
+}
+
+.animate-photo.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Текст появляется справа */
+.animate-text {
+    transform: translateX(50px);
+}
+
+.animate-text.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+/* Начальное состояние анимации */
+.animate-top, .animate-bottom {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Текст появляется сверху вниз */
+.animate-top {
+    transform: translateY(-50px);
+}
+
+.animate-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Книга появляется снизу вверх */
+.animate-bottom {
+    transform: translateY(50px);
+}
+
+.animate-bottom.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+/* Начальное состояние анимации */
+.animate-quote-bottom {
+    opacity: 0;
+    transform: translateY(50px); /* Сдвиг вниз */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Анимация при появлении */
+.animate-quote-bottom.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* Начальные состояния анимации */
+.animate-photo-left, .animate-text-right {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Фото выезжает слева */
+.animate-photo-left {
+    transform: translateX(-50px);
+}
+
+.animate-photo-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Текст появляется справа */
+.animate-text-right {
+    transform: translateX(50px);
+}
+
+.animate-text-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+/* Начальное состояние анимации */
+.animate-quote-bottom-2 {
+    opacity: 0;
+    transform: translateY(50px); /* Сдвиг вниз */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Анимация при появлении */
+.animate-quote-bottom-2.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+/* Начальные состояния анимации */
+.animate-title-right, .animate-reviews-left {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Заголовок появляется справа */
+.animate-title-right {
+    transform: translateX(50px);
+}
+
+.animate-title-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Отзывы появляются слева */
+.animate-reviews-left {
+    transform: translateX(-50px);
+}
+
+.animate-reviews-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+/* Начальное состояние анимации */
+.animate-title-top {
+    opacity: 0;
+    transform: translateY(-50px); /* Сдвиг вверх */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-card-bottom {
+    opacity: 0;
+    transform: translateY(50px); /* Сдвиг вниз */
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: var(--delay);
+}
+
+/* Анимация при появлении */
+.animate-title-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-card-bottom.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+/* Начальные состояния анимации */
+.animate-title-top {
+    opacity: 0;
+    transform: translateY(-50px); /* Сдвиг вверх */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-question-left {
+    opacity: 0;
+    transform: translateX(-50px); /* Сдвиг влево */
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: var(--delay);
+}
+
+/* Анимация при появлении */
+.animate-title-top.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-question-left.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .image-and-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-container .section-title {
+       text-align: center;
+       margin-top: 10px;
+
+    }
+
+    .image-container {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .text-container {
+        margin-top: 40px;
+        width: 100%;
+        max-width: 980px;
+    }
+
+
+    .text-container-second {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .photo-image {
+        margin-right: 0px;
+    }
+
+
+    .author-photo {
+        margin-right: 0px;
+    }
+
+    .photo-caption-name {
+        margin-right: 0px;
+    }
+
+    .photo-caption-photo {
+        margin-right: 0px;
+    }
+
+    .author-title {
+        text-align: center;
+        margin-top:20px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .lang-switch, .btn.pill {
+        display: inline-block;
+
+    }
+
+
+    .navbar-toggler {
+        order: 2;
+    }
+
+    .author-title {
+        text-align: center;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    /* Анимация справа налево */
+    .animate-right {
+        transform: translateX(-50px);
+    }
+
+
+
+
+
+
+
+
+
+    /* Текст появляется справа */
+    .animate-text {
+        transform: translateX(-50px);
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /* Книга появляется снизу вверх */
+    .animate-bottom {
+        transform: translateY(-50px);
+    }
+
+
+
+
+
+
+
+
+    /* Текст появляется справа */
+    .animate-text-right {
+        transform: translateX(-50px);
+    }
+
+
+
+
+
+
+    /* Заголовок появляется справа */
+    .animate-title-right {
+        transform: translateX(-50px);
+    }
+
+
+
+
+
+    .animate-card-bottom.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 590px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8%; /* Узкая кнопка по ширине */
+    }
+}
+
+@media (max-width: 576px) {
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .image-container {
+        max-width: 300px;
+    }
+
+    .text-container .section-title {
+        font-size: 1.8rem;
+        margin-top: 0px;
+    }
+
+    .text-container h2 {
+        font-size: 21px;
+        hyphens: auto !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .first-button {
+        text-align: center;
+    }
+
+
+
+    .quote-text {
+        font-size: 1.6rem;
+    }
+
+    .quote-author {
+        font-size: 1.3rem;
+    }
+
+
+
+
+    .section-description {
+        font-size: 21px;
+        hyphens: auto;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+
+
+
+    .author-title {
+        font-size: 1.8rem;
+    }
+
+    .author-description {
+        font-size: 21px;
+        hyphens: auto;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+
+
+
+    .reviews-title {
+        font-size: 1.8rem;
+    }
+
+
+
+
+
+    .book-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .flipbook {
+        height: 530px;
+    }
+}
+
+@media (max-width: 400px) {
+    .flipbook {
+        height: 440px;
+    }
+}
+
+@media (max-width: 340px) {
+    .flipbook {
+        height: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+

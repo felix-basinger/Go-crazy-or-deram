@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <title>Підтвердження замовлення</title>
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: "Roboto Slab", serif;-->
+<!--            background: linear-gradient(to bottom, #530a6b, #52237f);-->
+<!--            padding: 20px;-->
+<!--        }-->
+<!--        .email-container {-->
+<!--            width: 100%;-->
+<!--            background: linear-gradient(to top, #530a6b, #52237f);-->
+<!--            padding: 20px;-->
+<!--            margin: auto;-->
+<!--            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);-->
+<!--            border-radius: 10px;-->
+<!--        }-->
+<!--        h1 {-->
+<!--            color: #ffda44;-->
+<!--            text-shadow: 0px 0px 10px rgba(255, 218, 68, 0.8);-->
+<!--        }-->
+<!--        p {-->
+<!--            color: #ffda44;-->
+<!--            font-size: 16px;-->
+<!--        }-->
+<!--        a {-->
+<!--            text-decoration: none !important;-->
+<!--            color: #ffda44 !important;-->
+<!--        }-->
+<!--        .btn {-->
+<!--            background: linear-gradient(135deg, #ffda44, #ffe999);-->
+<!--            color: #530a6b !important;-->
+<!--            padding: 12px 30px;-->
+<!--            margin-top: 20px;-->
+<!--            border: none;-->
+<!--            border-radius: 15px;-->
+<!--            font-size: 1.2rem;-->
+<!--            font-weight: bold;-->
+<!--            box-shadow: 0px 5px 15px rgba(255, 218, 68, 0.4);-->
+<!--            transition: all 0.3s ease;-->
+<!--            text-decoration: none !important;-->
+<!--        }-->
+<!--        .order-details {-->
+<!--            background-color: rgba(255, 218, 68, 0.1);-->
+<!--            padding: 15px;-->
+<!--            border-radius: 8px;-->
+<!--            margin-top: 15px;-->
+<!--        }-->
+<!--        .order-details h2{-->
+<!--            color: #ffda44 !important;-->
+<!--        }-->
+<!--        .order-details p {-->
+<!--            margin: 5px 0;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+    <div class="email-container">
+        <h1>Дякуємо за ваше замовлення!</h1>
+        <p>Ваш платіж пройшов успішно, і ми вже почали обробку вашого замовлення.</p>
+        <p>Очікуйте повідомлення з інформацією про доставку найближчим часом.</p>
+
+        <div class="order-details">
+            <h2>Деталі замовлення:</h2>
+            <p><strong>Ім’я:</strong> {{ first_name }}</p>
+            <p><strong>Прізвище:</strong> {{ last_name }}</p>
+            <p><strong>Телефон:</strong> {{ phone }}</p>
+            <p><strong>Email:</strong> {{ email }}</p>
+            <p><strong>Адреса доставки:</strong> {{ address }}</p>
+            <p><strong>Книга:</strong> {{ book_language }}</p>
+            <p><strong>Тип доставки:</strong> {{ delivery_type }}</p>
+            <p><strong>Ціна:</strong> {{ price }} €</p>
+        </div>
+
+        <p>Якщо у вас виникли будь-які запитання, звертайтеся до нашої підтримки:</p>
+        <p><strong>Email: agentsolitary@gmail.com</strong></p>
+        <a href="https://tag-vietnamese-elevation-supported.trycloudflare.com/" class="btn">На головну</a>
+    </div>
+</body>
+</html>

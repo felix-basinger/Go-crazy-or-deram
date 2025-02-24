@@ -1,0 +1,557 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секретная Книга</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper d-flex flex-column min-vh-100">
+    <!-- Навигационная панель -->
+    <nav class="navbar navbar-expand-lg shadow-md">
+        <div class="container-fluid">
+            <div class="d-flex ms-auto align-items-center d-lg-none">
+                <div class="lang-switch me-3">
+                        <a class="lang-active" href="#">UA</a> | <a class="lang" href="/en">EN</a>
+                    </div>
+                    <a href="#buy_book" class="btn nav-link btn-warning pill me-3">Придбати книгу</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about_book">Про книгу</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prologue">Пролог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#author">Авторка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#review">Відгуки</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-flex align-items-center">
+                    <div class="lang-switch me-3">
+                        <a class="lang-active" href="#">UA</a> | <a class="lang" href="/en">EN</a>
+                    </div>
+                    <a href="#buy_book" class="btn nav-link btn-warning pill">Придбати книгу</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Основной контент -->
+    <section class="main-section d-flex flex-column flex-lg-row align-items-center justify-content-center">
+    <div class="container">
+        <h1 class="section-title text-center mb-5 animate-title">«Збожеволiти або йти до своєї мрiї»</h1>
+
+        <div class="d-flex flex-column flex-xl-row image-and-text">
+            <div class="image-container mb-4 mb-lg-0 animate-left">
+                <img src="{% static 'images/1.png' %}" alt="Декоративная звезда" class="star-image">
+            </div>
+
+            <div class="text-container animate-right">
+                <h2 class="section-title">Історія любові та сили мрії</h2>
+                <h2>Ця книга — більше, ніж автобіографія. Це історія про любов, яка не має меж, і про шлях жінки,
+                    яка наважилася слідувати за своїм серцем.</h2>
+                <h2>Ця книга — щира і натхненна розповідь про те, як музика може змінити долю, а віра в мрію —
+                    подолати всі перешкоди.</h2>
+                <h2>Чи зустріла вона BTS? Як це почуття трансформувало її життя?
+                    І що насправді означає любов у світі, де мрії здаються неможливими?</h2>
+                <h2>Відповіді на ці та багато інших важливих запитань розкриваються в цій книзі.</h2>
+                <div class="first-button">
+                    <a href="#about_book" class="btn btn-main">Дiзнатися бiльше</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="quote-section-second">
+    <div class="container text-center quote-block animate-quote">
+        <div class="quote-text">
+            <p>«Сміливість починається з того, щоб слідувати за своєю мрією, навіть коли вона здається
+                безумною.»</p>
+            <footer class="quote-author">— Сократ</footer>
+        </div>
+    </div>
+</section>
+
+
+    <section class="photo-text-section" id="about_book">
+    <div class="container">
+        <div class="d-flex flex-column flex-xl-row text-container-second">
+            <div class="photo-container mb-4 mb-lg-0 me-lg-5 animate-photo">
+                <img src="{% static 'images/2.png' %}" alt="Обложка книги" class="photo-image">
+            </div>
+            <div class="text-container animate-text">
+                <h2 class="section-title">Шлях до мрії</h2>
+                <p class="section-description">Книга «Збожеволіти або йти до своєї мрії» — це емоційна подорож,
+                    що змушує замислитися над сміливістю, любов’ю та силою мистецтва, здатного трансформувати
+                    наше життя.</p>
+                <p class="section-description">Автор ділиться особистою історією, сповненою злетів і падінь,
+                    показуючи,
+                    що мрії — це не просто красиві ілюзії, а справжні орієнтири, які допомагають долати
+                    перешкоди та знаходити себе.</p>
+                <p class="section-description">Ця книга розповідає історію жінки, яка наважилася на відчайдушний
+                    крок — слідувати за своєю мрією, незважаючи ні на що. Поринання у світ любові, музики та сили
+                    віри не залишить байдужим жодного читача.</p>
+                <div class="first-button">
+                    <a href="#prologue" class="btn btn-learn-more">Дивитися книгу</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="flipbook-section" id="prologue">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 animate-top">Перегляньте декілька сторінок книги</h2>
+        <div class="flipbook animate-bottom">
+            <div class="book-page page1">
+                <img src="{% static 'images/5p_UA_page-0001.jpg' %}" alt="Страница 1">
+            </div>
+            <div class="book-page page2">
+                <img src="{% static 'images/5p_UA_page-0002.jpg' %}" alt="Страница 2">
+            </div>
+            <div class="book-page page3">
+                <img src="{% static 'images/5p_UA_page-0003.jpg' %}" alt="Страница 3">
+            </div>
+            <div class="book-page page4">
+                <img src="{% static 'images/5p_UA_page-0004.jpg' %}" alt="Страница 4">
+            </div>
+            <div class="book-page page5">
+                <img src="{% static 'images/5p_UA_page-0005.jpg' %}" alt="Страница 5">
+            </div>
+        </div>
+
+        <!-- Кнопки управления -->
+        <div class="d-flex flipbook-controls mt-4 text-center animate-bottom">
+            <button class="btn btn-secondary btn-prev">Назад</button>
+            <button class="btn btn-secondary btn-next">Вперед</button>
+        </div>
+    </div>
+</section>
+
+
+
+    <section class="quote-section-first">
+    <div class="container text-center quote-block animate-quote-bottom">
+        <div class="quote-text">
+            <p>«Авторка Ірина Клипко — жінка, яка перетворила власну любов до BTS на джерело натхнення
+                і сміливості. Її історія підкорила Корею, стала символом української жіночої сили та
+                об’єднала серця фанатів у всьому світі.»</p>
+            <footer class="quote-author">— Софiя Мельник - портал «Хочу!»</footer>
+        </div>
+    </div>
+</section>
+
+
+    <section class="about-author-section" id="author">
+    <div class="container">
+        <div class="d-flex flex-column flex-xl-row">
+            <div class="author-photo-container mb-4 mb-lg-0 animate-photo-left">
+                <img src="{% static 'images/iryna_klypko.jpg' %}" alt="Фото автора" class="author-photo">
+                <p class="photo-caption-name">Ірина Клипко - авторка книги.</p>
+                <p class="photo-caption-photo">Фото: news.hochu.ua</p>
+            </div>
+            <div class="author-text-container text-lg-start animate-text-right">
+                <h2 class="author-title">Про авторку</h2>
+                <p class="author-description">Ірина Клипко — 59-річна українка, багатодітна мати, мрійниця та
+                    натхненниця, яка доводить,
+                    що життя завжди можна змінити, якщо слідувати за своїми мріями. Її історія - це приклад того,
+                    як любов до музики та віра у себе можуть стати рушійною силою трансформації.</p>
+                <p class="author-description">Протягом тривалого часу її життя було звичним - сім’я, робота, рутина.
+                    Однак усе змінилося, коли вона відкрила для себе творчість культового корейського гурту BTS.
+                    Їхня музика стала для неї натхненням і поштовхом до змін.</p>
+                <div class="first-button">
+                    <a href="#review" class="btn btn-about-more">Відгуки</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="quote-section">
+    <div class="container text-center quote-block animate-quote-bottom-2">
+        <div class="quote-text">
+            <p>«Мрії — це не про вік чи обставини. Це про сміливість зробити перший крок назустріч собі.»</p>
+            <footer class="quote-author">— Ірина Клипко</footer>
+        </div>
+    </div>
+</section>
+
+
+    <section class="reviews-section" id="review">
+        <div class="container">
+            <h2 class="reviews-title text-center mb-4 animate-title-right">Відгуки читачів</h2>
+
+            <!-- Слайдер с отзывами -->
+            <div id="reviewsCarousel" class="carousel slide animate-reviews-left" data-bs-ride="carousel" data-bs-interval="5500">
+                <div class="carousel-inner">
+                    <!-- Первый слайд с тремя отзывами -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Ця книга змусила мене переосмислити мої мрії та сміливість
+                                        їх реалізовувати. Неймовірно надихаюча історія!»</p>
+                                    <p class="review-author">— Олена, Київ</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Прочитавши цю книгу, я відчув, що немає нічого неможливого.
+                                        Це справжня подорож до себе.»</p>
+                                    <p class="review-author">— Андрій, Львів</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Історія Ірини змусила мене зробити перший крок до змін у
+                                        своєму житті. Рекомендую всім!»</p>
+                                    <p class="review-author">— Марія, Харків</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Второй слайд с тремя отзывами -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Ця книга розповідає про справжню силу мрії. Після прочитання
+                                        я зрозуміла, що готова ризикувати.»</p>
+                                    <p class="review-author">— Світлана, Одеса</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Ця історія надихнула мене знайти нову пристрасть у житті.
+                                        Надзвичайно мотиваційна книга!»</p>
+                                    <p class="review-author">— Віктор, Чернігів</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Книга Ірини стала для мене дороговказом. Я усвідомив, що
+                                        мрії не мають меж, окрім тих, що ми створюємо самі.»</p>
+                                    <p class="review-author">— Максим, Дніпро</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Третий слайд с тремя отзывами -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Ця книга дала мені сили зробити перший крок до власного
+                                        проєкту, який я завжди відкладала.»</p>
+                                    <p class="review-author">— Анастасія, Полтава</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Рекомендую кожному, хто мріє про зміни. Книга доводить, що
+                                        вони можливі!»</p>
+                                    <p class="review-author">— Дмитро, Запоріжжя</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="review-card p-4">
+                                    <p class="review-text">«Історія, яка надихає на новий погляд на життя та мрії. Дякую
+                                        за це видатне натхнення!»</p>
+                                    <p class="review-author">— Тетяна, Вінниця</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Управляющие кнопки -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel"
+                        data-bs-slide="prev">
+                    <span class="bi bi bi-chevron-left carousel-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel"
+                        data-bs-slide="next">
+                    <span class="bi bi bi-chevron-right carousel-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="book-formats-section" id="buy_book">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 animate-title-top">Варіанти форматів книги для покупки</h2>
+        <div class="row g-4">
+            <!-- Первый формат книги -->
+            <div class="col-lg-6 animate-card-bottom" style="--delay: 0s;">
+                <div class="book-card p-4">
+                    <h3 class="book-title">«Збожеволiти або йти до своєї мрiї»</h3>
+                    <p class="book-language">Мова: Українська</p>
+                    <img src="{% static 'images/ua.png' %}" alt="Тайная Книга" class="book-cover mb-3 mt-3">
+                    <div class="price-options">
+                        <button class="btn btn-order" data-book-language="Українська" onclick="setBookLanguage(this)" data-book="Збожеволiти або йти до своєї мрiї">Друкована версія: <span>25 €</span></button>
+                    </div>
+                    <div class="more-details">
+                        <a href="#faq">Детальніше про покупку</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Второй формат книги -->
+<!--            <div class="col-lg-4 animate-card-bottom" style="&#45;&#45;delay: 0.3s;">-->
+<!--                <div class="book-card p-4">-->
+<!--                    <h3 class="book-title">«Go crazy or going to your dream»</h3>-->
+<!--                    <p class="book-language">Мова: Англiйська</p>-->
+<!--                    <img src="{% static 'images/en.png' %}" alt="Таємна Книга" class="book-cover mb-3 mt-3">-->
+<!--                    <div class="price-options">-->
+<!--                        <button class="btn btn-order" data-book-language="Англійська" onclick="setBookLanguage(this)" data-book="Збожеволiти або йти до своєї мрiї">Друкована версія: <span>25 €</span></button>-->
+<!--                    </div>-->
+<!--                    <div class="more-details">-->
+<!--                        <a href="#faq">Детальніше про покупку</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <!-- Третий формат книги -->
+            <div class="col-lg-6 animate-card-bottom" style="--delay: 0.6s;">
+                <div class="book-card p-4">
+                    <h3 class="book-title">«Сойти с ума или идти к своей мечте»</h3>
+                    <p class="book-language">Мова: росiйська</p>
+                    <img src="{% static 'images/ru.png' %}" alt="The Secret Book" class="book-cover mb-3 mt-3">
+                    <div class="price-options">
+                        <button class="btn btn-order" data-book-language="Російська" onclick="setBookLanguage(this)" data-book="Збожеволiти або йти до своєї мрiї">Друкована версія: <span>25 €</span></button>
+                    </div>
+                    <div class="more-details">
+                        <a href="#faq">Детальніше про покупку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Всплывающее окно (модальное окно) -->
+    <!-- Всплывающее окно (модальное окно) -->
+    <div id="orderModal" class="modal-overlay">
+        <div class="modal-content p-4">
+            <button class="btn-close" id="closeModal"></button>
+            <h3 id="modalTitle" class="text-center">Замовлення книги</h3>
+
+            <!-- Окно выбора типа доставки -->
+            <div id="deliveryOptions">
+                <p class="modal-message text-center mb-3">Оберіть опцію доставки:</p>
+                <div class="modal-buttons d-flex justify-content-center mb-4">
+                    <button class="btn btn-delivery me-2" id="btn-ukraine">Доставка по Україні</button>
+                    <button class="btn btn-delivery" id="btn-world">Доставка по світу</button>
+                </div>
+            </div>
+
+            <!-- Форма доставки по Украине -->
+            <form id="ukraineForm" action="{% url 'submit_ukraine_form' %}" method="post" class="delivery-form d-none">
+                {% csrf_token %}
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                <input type="hidden" name="lang" value="{{ request.LANGUAGE_CODE }}">
+                <input type="hidden" id="request_token_ukraine" name="request_token" value="{{ uuid.uuid4 }}">
+                <input type="hidden" id="book_language_ukraine" name="book_language" value="">
+                <div class="mb-3">
+                    <label for="first_name_ua" class="form-label">Ім’я</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name_ua" placeholder="Iван" required>
+                </div>
+                <div class="mb-3">
+                    <label for="last_name_ua" class="form-label">Прізвище</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name_ua" placeholder="Петренко" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone_ua" class="form-label">Номер телефону</label>
+                    <input type="tel" class="form-control" name="phone" id="phone_ua" placeholder="+380(000)-000-00-00"required>
+                </div>
+                <div class="mb-3">
+                    <label for="address_ua" class="form-label">Адреса доставки Новою Поштою (місто, номер відділення або поштомата)</label>
+                    <input type="text" class="form-control" name="address" id="address_ua" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email_ua" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email_ua" placeholder="petrenko123@gmail.com" required>
+                </div>
+                <button type="button" class="btn btn-submit" onclick="redirectToLiqPay('ukraineForm', 'ukraine')">
+                    Оформити замовлення
+                </button>
+            </form>
+
+            <!-- Форма доставки по світу -->
+            <form id="worldForm" action="{% url 'submit_world_form' %}" method="post" class="delivery-form d-none">
+                {% csrf_token %}
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                <input type="hidden" name="lang" value="{{ request.LANGUAGE_CODE }}">
+                <input type="hidden" id="request_token_world" name="request_token" value="{{ uuid.uuid4 }}">
+                <input type="hidden" id="book_language_world" name="book_language" value="">
+                <div class="mb-3">
+                    <label for="first_name_world" class="form-label">Ім’я (латиницею, як у закордонному паспортi)</label>
+                    <input type="text" class="form-control" name="first_name" id="first_name_world" placeholder="Ivan"required>
+                </div>
+                <div class="mb-3">
+                    <label for="last_name_world" class="form-label">Прізвище (латиницею, як у закордонному паспортi)</label>
+                    <input type="text" class="form-control" name="last_name" id="last_name_world" placeholder="Petrenko" required>
+                </div>
+                <div class="mb-3">
+                    <label for="country_world" class="form-label">Країна</label>
+                    <input type="text" class="form-control" name="country" id="country_world" placeholder="Нiмеччина" required>
+                </div>
+                <div class="mb-3">
+                    <label for="city_world" class="form-label">Місто</label>
+                    <input type="text" class="form-control" name="city" id="city_world" placeholder="Берлiн" required>
+                </div>
+                <div class="mb-3">
+                    <label for="postal_code_world" class="form-label">Поштовий індекс</label>
+                    <input type="text" class="form-control" name="postal_code" id="postal_code_world" placeholder="59000" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address_world" class="form-label">Адреса (вулиця, будинок, квартира)</label>
+                    <input type="text" class="form-control" name="address" id="address_world" placeholder="Bergfriedstraße, 123" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone_world" class="form-label">Номер телефону з кодом країни</label>
+                    <input type="tel" class="form-control" name="phone" id="phone_world" placeholder="+49(000)-000-00-00" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email_world" class="form-label">Email</label>
+                    <input type="email" class="form-control" name="email" id="email_world" placeholder="petrenko123@gmail.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="additional_info_world" class="form-label">Додаткова інформація</label>
+                    <textarea class="form-control" name="additional_info" id="additional_info_world"
+                              rows="3"></textarea>
+                </div>
+                <button type="button" class="btn btn-submit btn-delivery" onclick="redirectToLiqPay('worldForm', 'world') ">Оформити
+                    замовлення
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 animate-title-top">Часті питання</h2>
+            <div class="faq-item animate-question-left" style="--delay: 0s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>Як я можу придбати вашу книгу?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Придбати книгу ви можете безпосередньо на <u>нашому сайті</u>, натиснувши <u>кнопку з обраною
+                        версією книги
+                        та її ціною</u>. Вартість одного примірника книги будь-якою з двох мов (українською або російською) становить <u>25€ ≈ 1100₴</u>.</p>
+                    <p>Оплата здійснюється в <u>євро (€) за курсом центрального банку</u>. Після успішної оплати ви
+                        отримаєте
+                        <u>квитанцію на зазначену вами електронну пошту</u>, а ми протягом 2-3 робочих днів підготуємо
+                        та відправимо книгу на вказану вами адресу.</p>
+                    <p>✨Ваш екземпляр уже чекає на вас — зробіть замовлення прямо зараз!✨</p>
+                </div>
+            </div>
+            <div class="faq-item animate-question-left" style="--delay: 0.2s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>Як мені доставлять мою книгу?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Доставка по Україні здійснюється за допомогою <u>Нової Пошти</u> — оберіть
+                        зручне для вас відділення або поштомат під час оформлення замовлення. Ми забезпечуємо
+                        <u>безкоштовну доставку по всій території України</u>.</p>
+                    <p>Доставка за кордон виконується <u>міжнародними службами доставки</u>. Термін отримання замовлення
+                        залежить <u>від країни призначення та може варіюватися</u>. Вартість міжнародної доставки
+                        <u>складає 23€</u> і вже врахована у фінальну суму при оформленні замовлення за межі України
+                        (48€).</p>
+                    <p>✨Ми дбаємо про швидку та надійну доставку вашої книги у будь-який куточок світу!✨</p>
+                </div>
+            </div>
+            <div class="faq-item animate-question-left" style="--delay: 0.4s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>Чи є ця книга в електронному форматі?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>На даний момент книга доступна <u>лише у друкованому форматі</u>, але вже зовсім скоро ви
+                        зможете придбати електронну версію «Збожеволіти або йти до своєї мрії», створену для
+                        комфортного читання на ваших улюблених пристроях.✨</p>
+                </div>
+            </div>
+            <div class="faq-item animate-question-left" style="--delay: 0.6s;">
+                <button class="faq-question d-flex justify-content-between align-items-center">
+                    <span>Куди звертатися з питань щодо замовлення?</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Усі запитання щодо замовлення або доставки ви можете надсилати на нашу електронну адресу:
+                        agentsolitary@gmail.com. Ми завжди раді вам допомогти!✨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Футер -->
+    <footer class="main-footer text-center py-3 mt-auto">
+        <p>&copy; <span id="currentYear"></span> «Збожеволiти або йти до своєї мрiї».</p>
+        <p>Усі права захищені.</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'js/page_turning.js' %}"></script>
+<script src="{% static 'js/dynamic_year.js' %}"></script>
+<script src="{% static 'js/overlay_mode.js' %}"></script>
+<script src="{% static 'js/right_overlay_close.js' %}"></script>
+<script>
+    const STRIPE_PUBLIC_KEY = "{{ STRIPE_PUBLIC_KEY }}";
+</script>
+<script src="{% static 'js/stripe_pay_session.js' %}"></script>
+<script src="{% static 'js/state_switch_navbar.js' %}"></script>
+<script src="{% static 'js/open_close_question.js' %}"></script>
+<script src="{% static 'js/book_language.js' %}"></script>
+
+<script src="{% static 'js/animation/first_section.js' %}"></script>
+<script src="{% static 'js/animation/second_section.js' %}"></script>
+<script src="{% static 'js/animation/third_section.js' %}"></script>
+<script src="{% static 'js/animation/fourth_section.js' %}"></script>
+<script src="{% static 'js/animation/fifth_section.js' %}"></script>
+<script src="{% static 'js/animation/sixth_section.js' %}"></script>
+<script src="{% static 'js/animation/seventh_section.js' %}"></script>
+<script src="{% static 'js/animation/eighth_section.js' %}"></script>
+<script src="{% static 'js/animation/nineth_section.js' %}"></script>
+<script src="{% static 'js/animation/tenth_section.js' %}"></script>
+
+</body>
+</html>
+
+

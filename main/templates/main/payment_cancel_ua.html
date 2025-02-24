@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата успішна</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/payment_success.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="success-card">
+    <div class="success-icon"><i class="bi bi-x-circle"></i></div>
+    <h1>Оплата скасована</h1>
+    <p>На жаль, оплата не була завершена. Якщо ви випадково скасували платіж, спробуйте ще раз.</p>
+    <p>Якщо у вас виникли запитання, зверніться до нашої служби підтримки за email: <strong>agentsolitary@gmail.com</strong></p>
+    <a class="btn btn-back" href="/">На головну</a>
+</div>
+
+</body>
+</html>
